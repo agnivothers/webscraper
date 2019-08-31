@@ -18,3 +18,22 @@ try:
 except AttributeError as e:
   print(e)
   print(bs.h1)
+
+html_atag = """<html><body><p>Test html a tag example</p>
+<a href="http://www.packtpub.com">Home</a>
+<a href="http;//www.packtpub.com/books">Books</a>
+</body>
+</html>"""
+soup = BeautifulSoup(html_atag,'lxml')
+atag = soup.a
+print(atag['href'])
+print(atag.attrs)
+print(atag)
+print(type(atag))
+print(atag.name)
+atag.name='agniv'
+print(soup)
+print("----------------")
+first_a_string = atag.string
+print(type(first_a_string))
+print(first_a_string)
