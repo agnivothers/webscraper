@@ -5,3 +5,4 @@ with open("ecologicalpyramid.html","r") as ecological_pyramid:
 producer_entries = soup.find("ul")
 print(type(producer_entries))
 print(producer_entries.li.div.string)
+print('-----------')
