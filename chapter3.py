@@ -5,6 +5,7 @@ with open("ecologicalpyramid.html","r") as ecological_pyramid:
 producer_entries = soup.find("ul")
 print(type(producer_entries))
 print(producer_entries.li.div.string)
+<<<<<<< HEAD
 primary = soup.find(id="primaryconsumers")
 print(primary.text)
 
@@ -17,3 +18,4 @@ print("------------")
 all_li = soup.findAll("div",class_="name")
 for li in all_li:
   print(li.string)
+print('-----------')
