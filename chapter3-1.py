@@ -27,3 +27,5 @@ print(some_text)
 #print(producer)
 primaryconsumer = soup.find(id="primaryconsumers")
 print(primaryconsumer)
+
+
