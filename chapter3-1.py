@@ -25,7 +25,10 @@ print(type(some_text))
 print(some_text)
 #producer = soup.find(id="producers")
 #print(producer)
+print('1.')
 primaryconsumer = soup.find(id="primaryconsumers")
 print(primaryconsumer)
-
+print('2.')
+primaryconsumer_1 = soup.find(attrs={'id':'primaryconsumers'})
+print(primaryconsumer_1)
 
