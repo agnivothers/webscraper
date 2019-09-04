@@ -43,3 +43,16 @@ print(divname)
 print('5.')
 pname = soup.find("li",class_="qname")
 print(pname)
+
+all_tertiaryconsumers = soup.find_all(class_="tertiaryconsumerlist",limit=1)
+for tertiaryconsumer in all_tertiaryconsumers:
+  print(tertiaryconsumer)
+
+print('--------------------')
+all_div = soup.find_all("div",recursive=True)
+print(type(all_div))
+print(all_div)
+print('--------------------')
+all_consumers = soup.find_all(class_={"primaryconsumerlist","secondaryconsumerlist","tertiaryconsumerlist"})
+for consumer in all_consumers:
+  print(consumer)
