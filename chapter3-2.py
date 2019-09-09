@@ -1,3 +1,5 @@
+import urllib.request
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 with open("ecologicalpyramid.html","r") as ecological_pyramid:
@@ -11,4 +13,7 @@ for tertiaryconsumer in tertiaryconsumers:
   #print(tertiaryconsumer.find_next_sibling())
   #print(tertiaryconsumer.find_previous_sibling())
   #print(tertiaryconsumer.find_next())
-  print(tertiaryconsumer.find_previous())
+  #print(tertiaryconsumer.find_previous())
+
+html = urlopen("https://www.packtpub.com/all-products/all-books/")
+packtsoup = BeautifulSoup(html,"lxml")
