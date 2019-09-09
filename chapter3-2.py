@@ -26,3 +26,9 @@ soup_packtpub = BeautifulSoup(html,"lxml")
 #print (con.read())
 
 
+print("Printing booktitles ...")
+#booktitles = soup_packtpub.find_all(class_="card-title mt-0")
+booktitles = soup_packtpub.find_all(class_="product-meta")
+for booktitle in booktitles:
+  print("Printing booktitle ...")
+  print(booktitle)
