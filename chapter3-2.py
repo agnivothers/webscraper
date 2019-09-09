@@ -18,6 +18,7 @@ for tertiaryconsumer in tertiaryconsumers:
 #html = urlopen("https://www.packtpub.com/all-products/all-books/")
 #packtsoup = BeautifulSoup(html,"lxml")
 
+# The stackoverflow method url is: https://stackoverflow.com/questions/3336549/pythons-urllib2-why-do-i-get-error-403-when-i-urlopen-a-wikipedia-page
 url = "https://www.packtpub.com/all-products/all-books/"
 req = urllib.request.Request(url, headers={'User-Agent' : "Magic Browser"})
 html = urllib.request.urlopen( req )
