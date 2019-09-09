@@ -15,5 +15,13 @@ for tertiaryconsumer in tertiaryconsumers:
   #print(tertiaryconsumer.find_next())
   #print(tertiaryconsumer.find_previous())
 
-html = urlopen("https://www.packtpub.com/all-products/all-books/")
-packtsoup = BeautifulSoup(html,"lxml")
+#html = urlopen("https://www.packtpub.com/all-products/all-books/")
+#packtsoup = BeautifulSoup(html,"lxml")
+
+url = "https://www.packtpub.com/all-products/all-books/"
+req = urllib.request.Request(url, headers={'User-Agent' : "Magic Browser"})
+html = urllib.request.urlopen( req )
+soup_packtpub = BeautifulSoup(html,"lxml")
+#print (con.read())
+
+
